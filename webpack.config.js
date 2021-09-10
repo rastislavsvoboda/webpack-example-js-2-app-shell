@@ -52,9 +52,9 @@ module.exports = {
         loader: "vue-loader",
       },
       {
-        test: /\.css$/,
+        test: /\.(scss|css)$/,
         exclude: /node_modules/,
-        use: ["vue-style-loader", "css-loader", "postcss-loader"],
+        use: ["vue-style-loader", "css-loader", "postcss-loader", "sass-loader"],
       },
       // {
       //   test: /\.s[ac]ss$/i,
