@@ -79,7 +79,7 @@ module.exports = {
     //   shared: require("./package.json").dependencies,
     // }),
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
+      template: path.resolve(__dirname, 'public/index.html'),
     }),
     new CleanWebpackPlugin(),
   ],
