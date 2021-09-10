@@ -3,22 +3,23 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 // const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
+var CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   output: {
     publicPath: "http://localhost:8080/",
   },
 
   resolve: {
     alias: {
-      Components: path.resolve(__dirname, 'src/components/')
+      Components: path.resolve(__dirname, "src/components/"),
     },
     extensions: [".vue", "..."],
   },
 
   devServer: {
-    static: path.join(__dirname, 'public'),
+    static: path.join(__dirname, "public"),
     port: 8080,
     headers: {
       "Access-Control-Allow-Origin": "*",
@@ -35,7 +36,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
-      }, 
+      },
       // Images
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
@@ -53,12 +54,8 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'postcss-loader',
-        ]
-      }      
+        use: ["vue-style-loader", "css-loader", "postcss-loader"],
+      },
       // {
       //   test: /\.s[ac]ss$/i,
       //   use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
@@ -79,8 +76,11 @@ module.exports = {
     //   shared: require("./package.json").dependencies,
     // }),
     new HtmlWebPackPlugin({
-      template: path.resolve(__dirname, 'public/index.html'),
+      template: path.resolve(__dirname, "public/index.html"),
     }),
     new CleanWebpackPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [{ from: "src/assets", to: "assets" }],
+    }),
   ],
 };
