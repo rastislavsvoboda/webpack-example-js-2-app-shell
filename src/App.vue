@@ -8,18 +8,26 @@
     <img class="logo" alt="ModuleFederation logo" src="/assets/mf.jfif" />
     <img class="logo" alt="JavaScript logo" src="/assets/js.png" />
   </div>
-  <div class="component-container">
+  <!-- <div class="component-container">
     <HelloWorld />
+  </div> -->
+  <router-link to="/">Home</router-link> |
+  <router-link to="About">About</router-link> |
+  <router-link to="Module1">Module1</router-link>
+
+  <div class="component-container">
+  <router-view/>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from "module1/HelloWorld";
+// import HelloWorld from "module1/HelloWorld";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    // HelloWorld,
   },
 };
 </script>
@@ -39,11 +47,12 @@ export default {
   align-items: center;
   justify-items: center;
   justify-content: space-around;
-  margin: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
 }
 
 .logo {
-  /* height: 200px; */
+  height: 200px;
 }
 
 .component-container {
