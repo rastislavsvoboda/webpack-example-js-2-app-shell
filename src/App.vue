@@ -1,14 +1,14 @@
 <template>
-  <div class="logos">
-    <img alt="Vue logo" src="/assets/vue.png" />
-    <img alt="Webpack logo" src="/assets/webpack.png" />
-    <img alt="ModuleFederation logo" src="/assets/mf.jfif" />
-    <img alt="JavaScript logo" src="/assets/js.png" />
-  </div>
-  <h2>
+  <h1>
     Hello Vue 3 with Webpack 5 and Module Federation plugin and JavaScript
-  </h2>
-  <div class="container">
+  </h1>
+  <div class="logo-container">
+    <img class="logo" alt="Vue logo" src="/assets/vue.png" />
+    <img class="logo" alt="Webpack logo" src="/assets/webpack.png" />
+    <img class="logo" alt="ModuleFederation logo" src="/assets/mf.jfif" />
+    <img class="logo" alt="JavaScript logo" src="/assets/js.png" />
+  </div>
+  <div class="component-container">
     <HelloWorld />
   </div>
 </template>
@@ -34,7 +34,7 @@ export default {
   margin-top: 60px;
 }
 
-.logos {
+.logo-container {
   display: flex;
   align-items: center;
   justify-items: center;
@@ -42,10 +42,14 @@ export default {
   margin: auto;
 }
 
-.container {
-  border: 1px dashed red;
-  background: yellow;
+.logo {
+  /* height: 200px; */
+}
+
+.component-container {
+  border: 2px dashed red;
+  background: beige;
   border-radius: 50px;
-  margin: 5px 30px;
+  margin: 30px;
 }
 </style>
