@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-// const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
 var CopyWebpackPlugin = require("copy-webpack-plugin");
@@ -65,16 +65,16 @@ module.exports = {
 
   plugins: [
     new VueLoaderPlugin(),
-    // new ModuleFederationPlugin({
-    //   name: "app-shell",
-    //   filename: "remoteEntry.js",
-    //   remotes: {
-    //     "module1": "module1@http://localhost:8081/remoteEntry.js"
-    //   },
-    //   exposes: {
-    //   },
-    //   shared: require("./package.json").dependencies,
-    // }),
+    new ModuleFederationPlugin({
+      name: "app-shell",
+      filename: "remoteEntry.js",
+      remotes: {
+        "module1": "module1@http://localhost:8082/remoteEntry.js"
+      },
+      exposes: {
+      },
+      shared: require("./package.json").dependencies,
+    }),
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, "public/index.html"),
     }),
