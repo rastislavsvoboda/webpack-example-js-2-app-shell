@@ -1,20 +1,5 @@
 <template>
-  <h1>
-    Hello Vue 3 with Webpack 5 and Module Federation plugin and JavaScript
-  </h1>
-  <div class="logo-container">
-    <img class="logo" alt="Vue logo" src="/assets/vue.png" />
-    <img class="logo" alt="Webpack logo" src="/assets/webpack.png" />
-    <img class="logo" alt="ModuleFederation logo" src="/assets/mf.jfif" />
-    <img class="logo" alt="JavaScript logo" src="/assets/js.png" />
-  </div>
-  <!-- <div class="component-container">
-    <HelloWorld />
-  </div> -->
-  <router-link to="/">Home</router-link> |
-  <router-link to="About">About</router-link> |
-  <router-link to="Module1">Module1</router-link> |
-  <router-link to="Module2">Module2</router-link>
+  <AppHeader />
 
   <div class="component-container">
   <router-view/>
@@ -23,12 +8,12 @@
 </template>
 
 <script>
-// import HelloWorld from "module1/HelloWorld";
+import AppHeader from "Components/AppHeader.vue";
 
 export default {
   name: "App",
   components: {
-    // HelloWorld,
+    AppHeader,
   },
 };
 </script>
@@ -41,6 +26,18 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li,
+li a {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
 }
 
 .logo-container {
@@ -57,8 +54,9 @@ export default {
 }
 
 .component-container {
-  border: 2px dashed red;
-  background: beige;
+  border: 1px solid white;
+  box-shadow: 0.1rem 0 0.2rem  gray;
+  background: rgb(245,245,245);
   border-radius: 50px;
   margin: 30px;
   padding: 50px;

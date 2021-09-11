@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "Views/Home.vue";
-import HelloWorld from "module1/HelloWorld";
+import EditPersonBasic from "module1/EditPersonBasic";
 import PersonDetail from "module2/PersonDetail";
 
 const routes = [
@@ -21,7 +21,7 @@ const routes = [
   {
     path: "/module1",
     name: "Module1",
-    component: HelloWorld
+    component: EditPersonBasic
   },
   {
     path: "/module2",
