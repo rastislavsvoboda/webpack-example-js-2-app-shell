@@ -52,7 +52,7 @@ export default {
 }
 
 .logo {
-  height: 200px;
+  height: 100px;
 }
 
 .component-container {
