@@ -67,7 +67,8 @@ module.exports = {
       name: "app-shell",
       filename: "remoteEntry.js",
       remotes: {
-        "module1": "module1@http://localhost:8082/remoteEntry.js"
+        "module1": "module1@http://localhost:8082/remoteEntry.js",
+        "module2": "module2@http://localhost:8084/remoteEntry.js"
       },
       exposes: {
       },

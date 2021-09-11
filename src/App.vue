@@ -13,7 +13,8 @@
   </div> -->
   <router-link to="/">Home</router-link> |
   <router-link to="About">About</router-link> |
-  <router-link to="Module1">Module1</router-link>
+  <router-link to="Module1">Module1</router-link> |
+  <router-link to="Module2">Module2</router-link>
 
   <div class="component-container">
   <router-view/>
@@ -60,5 +61,6 @@ export default {
   background: beige;
   border-radius: 50px;
   margin: 30px;
+  padding: 50px;
 }
 </style>

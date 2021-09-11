@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "Views/Home.vue";
 import HelloWorld from "module1/HelloWorld";
+import PersonDetail from "module2/PersonDetail";
 
 const routes = [
   {
@@ -21,8 +22,12 @@ const routes = [
     path: "/module1",
     name: "Module1",
     component: HelloWorld
-  }
-];
+  },
+  {
+    path: "/module2",
+    name: "Module2",
+    component: PersonDetail
+  }];
 
 const router = createRouter({
   history: createWebHistory(),
