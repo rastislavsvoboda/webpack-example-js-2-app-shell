@@ -25,7 +25,8 @@ const routes = [
     component: EditPersonBasic
   },
   {
-    path: "/module2",
+    // path: "/module2",
+    path: "/persondetail/:id",
     name: "Module2",
     component: PersonDetail
   },

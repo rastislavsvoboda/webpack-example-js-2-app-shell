@@ -4,16 +4,16 @@
     <nav>
       <ul>
         <li>
-          <router-link to="/About">About</router-link>
+          <router-link to="/about">About</router-link>
         </li>
         <li>
-          <router-link to="Module1">Module1</router-link>
+          <router-link to="/module1">Module1</router-link>
         </li>
         <li>
-          <router-link to="Module2">Module2</router-link>
+          <router-link to="/persondetail/2">Module2</router-link>
         </li>
         <li>
-          <router-link to="Fruits">Fruits</router-link>
+          <router-link to="/fruits">Fruits</router-link>
         </li>
       </ul>
     </nav>
