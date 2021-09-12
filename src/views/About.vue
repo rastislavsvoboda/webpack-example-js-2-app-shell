@@ -9,7 +9,6 @@
     <img class="logo" alt="ModuleFederation logo" src="/assets/mf.jfif" />
     <img class="logo" alt="JavaScript logo" src="/assets/js.png" />
   </div>
-    <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the

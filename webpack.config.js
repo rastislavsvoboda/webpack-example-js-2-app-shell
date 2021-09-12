@@ -64,13 +64,16 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new ModuleFederationPlugin({
-      name: "app-shell",
+      name: "appshell",
       filename: "remoteEntry.js",
       remotes: {
         "module1": "module1@http://localhost:8082/remoteEntry.js",
-        "module2": "module2@http://localhost:8084/remoteEntry.js"
+        "module2": "module2@http://localhost:8084/remoteEntry.js",
+        "appshell": "appshell@http://localhost:8080/remoteEntry.js"
       },
       exposes: {
+        "./Store" : "./src/store/click-store.js"
+
       },
       shared: require("./package.json").dependencies,
     }),
