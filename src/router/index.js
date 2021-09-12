@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "Views/Home.vue";
 import EditPersonBasic from "module1/EditPersonBasic";
 import PersonDetail from "module2/PersonDetail";
-import FruitList from "Components/FruitList.vue";
+import TestComponent from "Components/TestComponent.vue";
 
 const routes = [
   {
@@ -20,7 +20,7 @@ const routes = [
       import(/* webpackChunkName: "about" */ "Views/About.vue"),
   },
   {
-    path: "/module1",
+    path: "/person/edit/:id",
     name: "Module1",
     component: EditPersonBasic
   },
@@ -31,9 +31,9 @@ const routes = [
     component: PersonDetail
   },
   {
-    path: "/fruits",
-    name: "Fruits",
-    component: FruitList,
+    path: "/test",
+    name: "Test",
+    component: TestComponent,
   },];
 
 const router = createRouter({

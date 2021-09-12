@@ -7,13 +7,13 @@
           <router-link to="/about">About</router-link>
         </li>
         <li>
-          <router-link to="/module1">Module1</router-link>
+          <router-link to="/person/edit/1">Module1</router-link>
         </li>
         <li>
           <router-link to="/persondetail/2">Module2</router-link>
         </li>
         <li>
-          <router-link to="/fruits">Fruits</router-link>
+          <router-link to="/test">Test</router-link>
         </li>
       </ul>
     </nav>
