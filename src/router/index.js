@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "Views/Home.vue";
 import EditPersonBasic from "module1/EditPersonBasic";
 import PersonDetail from "module2/PersonDetail";
+import FruitList from "Components/FruitList.vue";
 
 const routes = [
   {
@@ -27,7 +28,12 @@ const routes = [
     path: "/module2",
     name: "Module2",
     component: PersonDetail
-  }];
+  },
+  {
+    path: "/fruits",
+    name: "Fruits",
+    component: FruitList,
+  },];
 
 const router = createRouter({
   history: createWebHistory(),

@@ -12,6 +12,9 @@
         <li>
           <router-link to="Module2">Module2</router-link>
         </li>
+        <li>
+          <router-link to="Fruits">Fruits</router-link>
+        </li>
       </ul>
     </nav>
   </header>
